@@ -1,10 +1,30 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/grid">Grid</router-link>
-    </div>
-    <router-view />
-  </div>
+  <v-app>
+    <v-main>
+      <router-view />
+      <v-dialog v-model="loading.state" hide-overlay persistent width="300">
+        <v-card :color="loading.color" dark>
+          <v-card-text>
+            {{ loading.title }}
+            <v-progress-linear
+              indeterminate
+              color="white"
+              class="mb-0"
+            ></v-progress-linear>
+          </v-card-text>
+        </v-card>
+      </v-dialog>
+    </v-main>
+  </v-app>
 </template>
+
+<script>
+import { mapActions, mapState } from "vuex";
+export default {
+  name: "App",
+  components: {},
+  computed: {
+    ...mapState(["loading"]),
+  },
+};
+</script>
