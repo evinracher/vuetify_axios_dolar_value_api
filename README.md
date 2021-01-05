@@ -1,5 +1,9 @@
 # vuetify_axios_dolar_value_api
 
+Using Vue.js 2, vuetify and axios. Consuming the api: https://mindicador.cl/
+
+Running on: 
+
 ## Project setup
 ```
 npm install
