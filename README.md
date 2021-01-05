@@ -2,7 +2,7 @@
 
 Using Vue.js 2, vuetify and axios. Consuming the api: https://mindicador.cl/
 
-Running on: 
+Running on: https://vuetify-dolar-value.netlify.app/
 
 ## Project setup
 ```
